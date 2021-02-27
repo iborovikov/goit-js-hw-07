@@ -3,11 +3,14 @@ const validLengthRef = inpuRef.getAttribute('data-length');
 
 inpuRef.addEventListener('blur', onBlur);
 function onBlur(event) {
-  if (event.currentTarget.value.length <= validLengthRef) {
+  const lengthOfInput = event.currentTarget.value.length;
+  if (lengthOfInput <= validLengthRef && lengthOfInput > 0) {
     inpuRef.classList.remove('invalid')
    return inpuRef.classList.add('valid') 
-  } 
-    inpuRef.classList.remove('valid')
+  } else if (lengthOfInput === 0) {
+    inpuRef.classList.remove('invalid')
+     return inpuRef.classList.remove('valid') 
+  }
    return inpuRef.classList.add('invalid')
   
 }

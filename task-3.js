@@ -19,10 +19,11 @@ const galleryRef = document.querySelector('#gallery')
 const gallery = [];
 images.map(imaege => {
   const imageRef = document.createElement('img');
-  const photoElm = document.createElement('li')
+  const photoElm = document.createElement('li');
   imageRef.src = imaege.url;
   imageRef.alt = imaege.alt;
   imageRef.classList.add('img__styles')
+  photoElm.classList.add('item');
   photoElm.appendChild(imageRef)
 
   gallery.push(photoElm)

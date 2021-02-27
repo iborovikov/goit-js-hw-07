@@ -1,10 +1,10 @@
 .img__styles {
   width: 400px;
 }
-ul {
+#gallery {
   list-style: none;
   display: flex;
 }
-ul > li {
+.item:not(:last-child) {
   margin-right: 40px;
 }
