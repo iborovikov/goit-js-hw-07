@@ -1,11 +1,6 @@
 .img__styles {
   width: 400px;
 }
-.portfolio-list {
-  .item:not(:last-child) {
-    margin-bottom: 30px;
-  }
-}
 ul {
   list-style: none;
   display: flex;
