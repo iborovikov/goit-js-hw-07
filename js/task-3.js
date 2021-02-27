@@ -15,18 +15,14 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
-const galleryRef = document.querySelector('#gallery')
-const gallery = [];
-images.map(imaege => {
-  const imageRef = document.createElement('img');
-  const photoElm = document.createElement('li');
-  imageRef.src = imaege.url;
-  imageRef.alt = imaege.alt;
-  imageRef.classList.add('img__styles')
-  photoElm.classList.add('item');
-  photoElm.appendChild(imageRef)
 
-  gallery.push(photoElm)
-})
-galleryRef.append(...gallery)
-console.log(galleryRef)
+const galleryRef = document.querySelector('#gallery')
+
+const makeGaleryMarkup = (image) => {
+  const { url, alt } = image;
+  return `<li class="item"><img class="img__styles" src="${url}" alt="${alt}"></li>`;
+}
+
+const makeGalery = images.map(makeGaleryMarkup).join('')
+
+galleryRef.insertAdjacentHTML('afterbegin', makeGalery)

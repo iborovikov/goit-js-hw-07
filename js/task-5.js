@@ -1,11 +1,11 @@
 const inputRef = document.querySelector('#name-input');
 const outputRef = document.querySelector('#name-output');
 
-inputRef.addEventListener('input', onInput)
+inputRef.addEventListener('input', onInput);
 
 function onInput(event) {
   if (event.currentTarget.value === '') {
-   return outputRef.textContent = 'незнакомец'
+    return outputRef.textContent = 'незнакомец';
   }
-  outputRef.textContent = event.currentTarget.value
+  outputRef.textContent = event.currentTarget.value;
 }

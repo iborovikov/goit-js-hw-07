@@ -11,9 +11,9 @@ const ingredientsRef = document.querySelector('#ingredients');
 const elements = [];
 
 
-ingredients.map(ing => {
+ingredients.map(ingredient => {
   const element = document.createElement('li')
-  element.textContent = ing;
+  element.textContent = ingredient;
   elements.push(element)
 })
 ingredientsRef.append(...elements)

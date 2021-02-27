@@ -1,5 +1,6 @@
 .img__styles {
-  width: 400px;
+  width: auto;
+  height: 300px;
 }
 #gallery {
   list-style: none;

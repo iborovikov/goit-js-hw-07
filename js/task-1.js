@@ -1,4 +1,3 @@
-
 const listRef = document.querySelector('#categories');
 const categoriesRef = document.querySelectorAll('.item')
 console.log(`В списке ${listRef.children.length} категории.`)
